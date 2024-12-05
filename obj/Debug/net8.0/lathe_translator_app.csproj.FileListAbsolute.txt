@@ -1,0 +1,15 @@
+/Users/corbinprobasco/Desktop/lathe_translator_app/bin/Debug/net8.0/lathe_translator_app
+/Users/corbinprobasco/Desktop/lathe_translator_app/bin/Debug/net8.0/lathe_translator_app.deps.json
+/Users/corbinprobasco/Desktop/lathe_translator_app/bin/Debug/net8.0/lathe_translator_app.runtimeconfig.json
+/Users/corbinprobasco/Desktop/lathe_translator_app/bin/Debug/net8.0/lathe_translator_app.dll
+/Users/corbinprobasco/Desktop/lathe_translator_app/bin/Debug/net8.0/lathe_translator_app.pdb
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/lathe_translator_app.GeneratedMSBuildEditorConfig.editorconfig
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/lathe_translator_app.AssemblyInfoInputs.cache
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/lathe_translator_app.AssemblyInfo.cs
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/lathe_translator_app.csproj.CoreCompileInputs.cache
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/lathe_translator_app.sourcelink.json
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/lathe_translator_app.dll
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/refint/lathe_translator_app.dll
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/lathe_translator_app.pdb
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/lathe_translator_app.genruntimeconfig.cache
+/Users/corbinprobasco/Desktop/lathe_translator_app/obj/Debug/net8.0/ref/lathe_translator_app.dll
