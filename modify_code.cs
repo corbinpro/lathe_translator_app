@@ -97,7 +97,7 @@ public class modify_code
     //description of modify code(use override in tapping cycle)
     public virtual string modify_code_description()
     {
-        return "this function seperates all G0 lines containing both x and z values into two separate lines.";
+        return "Seperating all G0 lines containing both x and z values into two separate lines.\nEnter to continue...";
     }
 
 }

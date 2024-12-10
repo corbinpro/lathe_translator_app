@@ -1,21 +1,45 @@
 using System;
 using System.Reflection.Metadata;
+using Microsoft.Extensions.Configuration;
 
 public class parse_gcode 
 {
-    private string filepath = "";
+    
+    private string? filepath;
     private string Program_name = "";
     private List<List<string>> writeFile = new List<List<string>>();
     public parse_gcode()
     {
+        var config = readconfig();
+        filepath = config["filepath"];
         Console.WriteLine("Enter the name of the program: ");
         Program_name = Console.ReadLine();
-        filepath = "/Users/corbinprobasco/Desktop/lathe_translator_app/gcode_programs/"+ Program_name + ".nc";   
+        if (filepath == null)
+        {
+            Console.WriteLine("filepath not found in config.");
+        }
+        filepath = filepath + Program_name + ".nc";  
+        Console.WriteLine(filepath); 
     }
 
     public parse_gcode(List<List<string>> updatedCompoundList)
     {
+        var config = readconfig();
+        filepath = config["filepath"];
+        if (filepath == null)
+        {
+            Console.WriteLine("filepath not found in config.");
+        }
         writeFile = updatedCompoundList;
+    }
+
+    public IConfigurationRoot readconfig()
+    {
+        var config = new ConfigurationBuilder()
+        .SetBasePath(AppContext.BaseDirectory)
+        .AddJsonFile("parameters.json", optional: false, reloadOnChange: true)
+        .Build();
+        return config;
     }
 
     public List<List<string>> getCompoundList()

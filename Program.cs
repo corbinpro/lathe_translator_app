@@ -23,8 +23,7 @@ class Program
             if (choice == 1)
             {
                 modify_code modify = new modify_code();
-                modify.modify_code_description();
-                Console.WriteLine("Press enter to continue...");
+                Console.WriteLine(modify.modify_code_description());
                 Console.ReadLine();
                 filename = modify.ReadCode();
                 parse_gcode parse = new parse_gcode(modify.rapid_split());
@@ -36,14 +35,11 @@ class Program
             {
                 //add tapping cycle
                 tapping_cycle tap = new tapping_cycle();
-                tap.modify_code_description();
-                Console.WriteLine("Press enter to continue...");
+                Console.WriteLine(tap.modify_code_description());
                 Console.ReadLine();
                 filename = tap.ReadCode();
                 parse_gcode parse = new parse_gcode(tap.add_tapping_cycle());
-
-
-                //prompt user for tapping cycle parameters
+                parse.write_to_file(filename);
     
             }
             else if (choice == 3)
