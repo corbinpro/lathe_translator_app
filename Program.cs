@@ -17,14 +17,21 @@ class Program
     
         while(choice != 0)
         {
-            Console.WriteLine("Please select an option: \n 1. Split up rapids \n 2. Add tapping cycle \n 3. Part catcher \n 4. View Tapping Cycle Format \n 0. Exit");
+            Console.WriteLine("Please select an option: \n 1. Split up rapids \n 2. Add tapping cycle \n 3. View Tapping Cycle Format \n 0. Exit");
+            try
+            {
             choice = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid choice. Please choose a number between 1 and 4.");
+            }
             //if 1
             if (choice == 1)
             {
                 modify_code modify = new modify_code();
                 Console.WriteLine(modify.modify_code_description());
-                Console.ReadLine();
+                Thread.Sleep(1000);
                 filename = modify.ReadCode();
                 parse_gcode parse = new parse_gcode(modify.rapid_split());
                 parse.write_to_file(filename);
@@ -36,7 +43,7 @@ class Program
                 //add tapping cycle
                 tapping_cycle tap = new tapping_cycle();
                 Console.WriteLine(tap.modify_code_description());
-                Console.ReadLine();
+                Thread.Sleep(1000);
                 filename = tap.ReadCode();
                 parse_gcode parse = new parse_gcode(tap.add_tapping_cycle());
                 parse.write_to_file(filename);
@@ -44,14 +51,10 @@ class Program
             }
             else if (choice == 3)
             {
-                //part catcher
-                //prompt user for part catcher parameters
-    
-            }
-            else if (choice == 4)
-            {
                 //view tapping cycle format
+                tapping_cycle tap = new tapping_cycle();
                 //print out tapping cycle format
+                Console.WriteLine(tap.view_format());
     
             }            
             else if (choice == 0)

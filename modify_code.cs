@@ -29,27 +29,27 @@ public class modify_code
 
             foreach (var line in operation)
             {
-                // Split the line into parts
+                //split the line into parts
                 var parts = new List<string>(line.Split(' '));
 
-                // Check if the line contains "G0", "X", and "Z"
+                //Check if line contains G0, X, Z
                 if (parts.Contains("G0") && ContainsCoordinate(parts, "X") && ContainsCoordinate(parts, "Z"))
                 {
-                    // Extract the X value
+                    //Extract the X value
                     string xValue = ExtractCoordinate(parts, "X");
 
-                    // Remove the X value from the original line
+                    //Remove the X value from the original line
                     RemoveCoordinate(parts, "X");
 
-                    // Add the modified G0 line back to the updated operation
+                    //Add the modified G0 line back to the updated operation
                     updatedOperation.Add(string.Join(" ", parts));
 
-                    // Add a new line for the X value prefixed with G0
+                    //Add a new line for the X value prefixed with G0
                     updatedOperation.Add($"G0 {xValue}");
                 }
                 else
                 {
-                    // If the line doesn't match, just add it as-is
+                    //If the line doesn't match, just add it as-is
                     updatedOperation.Add(string.Join(" ", parts));
                 }
             }
@@ -60,12 +60,12 @@ public class modify_code
         return updatedCompoundList;
     }
 
-    private bool ContainsCoordinate(List<string> parts, string prefix)
+    private bool ContainsCoordinate(List<string> parts, string axis)
     {
         // Check if the list contains a part that starts with the given prefix
         foreach (var part in parts)
         {
-            if (part.StartsWith(prefix))
+            if (part.StartsWith(axis))
             {
                 return true;
             }
@@ -73,12 +73,12 @@ public class modify_code
         return false;
     }
 
-    private string ExtractCoordinate(List<string> parts, string prefix)
+    private string ExtractCoordinate(List<string> parts, string axis)
     {
         // Find the part that starts with the given prefix and return it
         foreach (var part in parts)
         {
-            if (part.StartsWith(prefix))
+            if (part.StartsWith(axis))
             {
                 return part; // Return the coordinate
             }
@@ -86,18 +86,16 @@ public class modify_code
         return string.Empty;
     }
     
-    private void RemoveCoordinate(List<string> parts, string prefix)
+    private void RemoveCoordinate(List<string> parts, string axis)
     {
         // Remove the part that starts with the given prefix
-        parts.RemoveAll(part => part.StartsWith(prefix));
+        parts.RemoveAll(part => part.StartsWith(axis));
     }
-
-    //part catcher method 
 
     //description of modify code(use override in tapping cycle)
     public virtual string modify_code_description()
     {
-        return "Seperating all G0 lines containing both x and z values into two separate lines.\nEnter to continue...";
+        return "Seperating all G0 lines containing both x and z values into two separate lines...";
     }
 
 }

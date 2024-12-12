@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lathe_translator_app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2515f8b07e6ee671e4e88b2e83e1d81bc6a1232")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33d5ee6990bef83d4d644cce814f3434d8aa4845")]
 [assembly: System.Reflection.AssemblyProductAttribute("lathe_translator_app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lathe_translator_app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
