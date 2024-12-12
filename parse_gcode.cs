@@ -115,7 +115,7 @@ public class parse_gcode
         try
         {
             File.WriteAllText(filename, updatedGCode);
-            Console.WriteLine("G-code has been successfully updated and written to the file.");
+            Console.WriteLine("G-code has been successfully updated and written to the file.\n\n");
         }
         catch (Exception ex)
         {

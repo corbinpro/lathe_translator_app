@@ -95,7 +95,7 @@ public class modify_code
     //description of modify code(use override in tapping cycle)
     public virtual string modify_code_description()
     {
-        return "Seperating all G0 lines containing both x and z values into two separate lines...";
+        return "\nProceed to separate all G0 lines with X and Z coordinates into two separate lines.\n";
     }
 
 }

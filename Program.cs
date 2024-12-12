@@ -31,10 +31,11 @@ class Program
             {
                 modify_code modify = new modify_code();
                 Console.WriteLine(modify.modify_code_description());
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 filename = modify.ReadCode();
                 parse_gcode parse = new parse_gcode(modify.rapid_split());
                 parse.write_to_file(filename);
+                Thread.Sleep(300);
                 
             
             }
@@ -43,10 +44,11 @@ class Program
                 //add tapping cycle
                 tapping_cycle tap = new tapping_cycle();
                 Console.WriteLine(tap.modify_code_description());
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 filename = tap.ReadCode();
                 parse_gcode parse = new parse_gcode(tap.add_tapping_cycle());
                 parse.write_to_file(filename);
+                Thread.Sleep(300);
     
             }
             else if (choice == 3)

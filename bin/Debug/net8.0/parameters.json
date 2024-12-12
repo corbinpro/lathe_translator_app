@@ -1,3 +1,5 @@
 { 
+    "_comment": "Modify the filepath value to the directory where you want to save the gcode files on the computer the program is installed in. include slashes at the end of the filepath.",
     "filepath" : "/Users/corbinprobasco/Desktop/lathe_translator_app/gcode_programs/"
+    
 }
